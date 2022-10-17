@@ -396,6 +396,25 @@ html {
 
 /* Typography
 --------------------------------------------- */
+h2.index-name {
+  margin-top: 6rem;
+  font-size: 3.5rem;
+}
+
+p.index-work-title {
+  margin-bottom: 8rem;
+}
+
+.index-name,
+.index-work-title {
+  margin: 1rem 1.5rem;
+}
+
+.blue-accents {
+  color: #2b3990;
+  font-weight: 500;
+}
+
 .site-title {
   font-size: 2rem;
 }
@@ -478,10 +497,25 @@ big {
 
 /* Elements
 --------------------------------------------- */
+.site-main .wp-container-2 a {
+  width: 193.417px;
+}
+
+footer .site-info {
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+  margin-bottom: 1rem;
+}
+
 .custom-logo-link {
   width: 80px;
   height: auto;
   margin: 1.5rem;
+}
+
+.site-main .wp-block-button {
+  margin: 0.5rem 1.5rem;
 }
 
 .site-header {

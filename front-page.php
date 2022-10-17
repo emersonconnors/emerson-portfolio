@@ -16,8 +16,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<h2>Emerson Connors</h2>
-		<p>< Front-End Web Developer /></p>
+		<h2 class="index-name">Emerson Connors.</h2>
+		<p class="index-work-title"><span class="blue-accents"><</span> Front-End Web Developer <span class="blue-accents">/></span></p>
 		<?php
 		while ( have_posts() ) :
 			the_post();
