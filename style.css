@@ -407,7 +407,21 @@ p.index-work-title {
 
 .index-name,
 .index-work-title {
-  margin: 1rem 1.5rem;
+  margin: 1rem 17rem;
+}
+
+@media (max-width: 1025px) {
+  .index-name,
+  .index-work-title {
+    margin: 1rem 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .index-name,
+  .index-work-title {
+    margin: 1rem 1.5rem;
+  }
 }
 
 .blue-accents {
@@ -500,12 +514,16 @@ big {
 .site-main .wp-container-2 a {
   width: 193.417px;
 }
-
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 17rem;
+  justify-content: flex-end;
+}
 footer .site-info {
-  position: absolute;
-  bottom: 0;
-  right: 45%;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-logo-link {
@@ -515,7 +533,19 @@ footer .site-info {
 }
 
 .site-main .wp-block-button {
-  margin: 0.5rem 1.5rem;
+  margin: 0.5rem 17rem;
+}
+
+@media (max-width: 1025px) {
+  .site-main .wp-block-button {
+    margin: 0.5rem 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-main .wp-block-button {
+    margin: 0.5rem 1.5rem;
+  }
 }
 
 .site-header {
@@ -702,11 +732,27 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
+nav .menu-toggle {
+  width: 75px;
+  height: auto;
+  border: none;
+  background-color: white;
+  fill: #2b3990;
+}
+
+/*  */
+
+.sub-menu ul {
+  position: absolute;
+  bottom: 5%;
+}
+/*  */
 
 .main-navigation {
   display: block;
   width: 100%;
   margin-right: 0.5rem;
+  position: relative;
 }
 
 .main-navigation ul {
@@ -753,6 +799,7 @@ textarea {
   display: block;
   text-decoration: none;
   margin-right: 1rem;
+  color: #2b3990;
 }
 
 /* Small menu. */
@@ -760,7 +807,12 @@ textarea {
 .main-navigation.toggled ul {
   display: block;
 }
-
+@media (max-width: 600px) {
+  .main-navigation.toggled ul {
+    position: absolute;
+    right: 5%;
+  }
+}
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
