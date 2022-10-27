@@ -33,7 +33,7 @@ function portfolio_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-hammer',
-        'supports'           => array( 'title',"custom-fields"),
+        'supports'           => array( 'title','custom-fields' ),
         
     );
     
@@ -41,3 +41,34 @@ function portfolio_register_custom_post_types() {
 
 }
 add_action( 'init', 'portfolio_register_custom_post_types' );
+
+function portfolio_register_taxonomies() {
+    // Add Work Language taxonomy
+    $labels = array(
+        'name'              => _x( 'Work Languages', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Work Language', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Work Languages' ),
+        'all_items'         => __( 'All Work Language' ),
+        'parent_item'       => __( 'Parent Work Language' ),
+        'parent_item_colon' => __( 'Parent Work Language:' ),
+        'edit_item'         => __( 'Edit Work Language' ),
+        'view_item'         => __( 'Vview Work Language' ),
+        'update_item'       => __( 'Update Work Language' ),
+        'add_new_item'      => __( 'Add New Work Language' ),
+        'new_item_name'     => __( 'New Work Language Name' ),
+        'menu_name'         => __( 'Work Language' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'work-languages' ),
+    );
+    register_taxonomy( 'work-languages', array( 'projects-work' ), $args );
+}
+add_action( 'init', 'portfolio_register_taxonomies');

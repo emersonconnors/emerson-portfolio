@@ -22,7 +22,7 @@
 			
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Created by %2$s.', 'emerson-portfolio' ), 'emerson-portfolio', '<a href="https://emersonconnors.com/"> Emerson Connors</a>' );
+				echo '<p>Created By: <a href="https://emersonconnors.com/">Emerson Connors</a></p>'
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

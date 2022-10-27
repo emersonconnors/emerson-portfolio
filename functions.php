@@ -138,6 +138,9 @@ add_action( 'widgets_init', 'emerson_portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function emerson_portfolio_scripts() {
+	//custom font
+	wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' );
+
 	wp_enqueue_style( 'emerson-portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'emerson-portfolio-style', 'rtl', 'replace' );
 
