@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,24 +16,25 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<h2 class="index-name">Emerson Connors.</h2>
-		<p class="index-work-title"><span class="blue-accents"><</span> Front-End Web Developer <span class="blue-accents">/></span></p>
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			
-			the_content();
+<main id="primary" class="site-main">
+	<h2 class="index-name">Emerson Connors.</h2>
+	<p class="index-work-title"><span class="blue-accents">
+			< </span> Front-End Web Developer <span class="blue-accents">/></span></p>
+	<?php
+	while (have_posts()) :
+		the_post();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		the_content();
 
-		endwhile; // End of the loop.
-		?>
+		// If comments are open or we have at least one comment, load up the comment template.
+		if (comments_open() || get_comments_number()) :
+			comments_template();
+		endif;
 
-	</main><!-- #main -->
+	endwhile; // End of the loop.
+	?>
+
+</main><!-- #main -->
 
 <?php
 

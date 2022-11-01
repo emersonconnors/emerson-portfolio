@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,25 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'emerson-portfolio' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				
-				?>
-			</a>
-			
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				echo '<p>Created By: <a href="https://emersonconnors.com/">Emerson Connors</a></p>'
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'emerson-portfolio')); ?>">
+			<?php
+			/* translators: %s: CMS name, i.e. WordPress. */
+
+			?>
+		</a>
+
+		<?php
+		/* translators: 1: Theme name, 2: Theme author. */
+		echo '<p>Created By: <a href="https://emersonconnors.com/">Emerson Connors</a></p>'
+		?>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
