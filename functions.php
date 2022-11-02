@@ -143,6 +143,10 @@ add_action('widgets_init', 'emerson_portfolio_widgets_init');
  */
 function emerson_portfolio_scripts()
 {
+
+	//isotope script
+	wp_enqueue_script('isotope', get_template_directory_uri() . '/js/libs/isotope.pkgd.min.js', array(), _S_VERSION, true);
+
 	//custom font
 	wp_enqueue_style('google_web_fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 

@@ -36,7 +36,7 @@ get_header();
 			while ($query->have_posts()) {
 				$query->the_post();
 	?>
-				<h4 class="skills-used-h4"><?php the_title(); ?></h4>
+				<h4 class="works-h4"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h4>
 
 
 	<?php

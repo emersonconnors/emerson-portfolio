@@ -512,6 +512,21 @@ big {
 
 /* Elements
 --------------------------------------------- */
+.works-h4 {
+  margin-bottom: 0;
+  margin-left: 17rem;
+  margin-top: 2rem;
+}
+
+.works-h4 a {
+  text-decoration: none;
+}
+
+.textarea-excerpt {
+  margin: 1rem 17rem;
+  max-width: 50rem;
+}
+
 .work-page-p {
   max-width: 50rem;
   margin: 1rem 17rem;
