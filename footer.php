@@ -29,6 +29,23 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+	var $grid = $('.grid').isotope({
+		// options
+		itemSelector: '.grid-item',
+		layoutMode: 'fitRows'
+	});
+
+	// filter items on button click
+	$('.filter-button-group').on('click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({
+			filter: filterValue
+		});
+	});
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
