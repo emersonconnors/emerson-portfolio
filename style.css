@@ -512,6 +512,15 @@ big {
 
 /* Elements
 --------------------------------------------- */
+
+.white-div {
+  background-color: white;
+}
+
+.grid {
+  background-color: white;
+}
+
 .works-h4 {
   margin-bottom: 0;
   margin-left: 17rem;
@@ -575,13 +584,16 @@ big {
 footer p {
   margin-bottom: 0;
 }
+
 footer {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: sticky;
+  z-index: -999;
   justify-content: flex-end;
   bottom: 0;
   right: 45%;
+  margin-top: 4rem;
   margin-bottom: 1rem;
 }
 footer .site-info {

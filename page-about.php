@@ -31,6 +31,7 @@ get_header();
 		// Check rows existexists.
 		if (have_rows('learned_technical_skills')) :
 	?>
+	<div class='white-div'>
 			<table class='skills-about'>
 				<tr>
 					<th>Languages/CMS</th>
@@ -52,6 +53,7 @@ get_header();
 				// End loop.
 				endwhile;
 				echo '</table>';
+				echo '</div>';
 			// No value.
 			else :
 			// Do something...
