@@ -25,14 +25,14 @@ get_header();
 		get_template_part('template-parts/content', 'page');
 	?>
 		<div class="button-group filter-button-group">
-			<button data-filter="*">Show All</button>
+			<button class="iso-button" data-filter="*">Show All</button>
 			<?php
 			$terms = get_terms(array(
 				'taxonomy' => 'work-languages',
 				'hide_empty' => false,
 			));
 			foreach ($terms as $term) {
-				echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+				echo '<button class="iso-button" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
 			}
 			?>
 		</div>

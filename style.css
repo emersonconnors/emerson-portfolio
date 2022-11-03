@@ -513,6 +513,18 @@ big {
 /* Elements
 --------------------------------------------- */
 
+.button-group {
+  margin-left: 17rem;
+}
+
+.iso-button {
+  border: 2px solid #2b3990;
+  color: #2b3990;
+  background-color: white;
+  margin-right: 1rem;
+  padding: 0.2rem 1rem;
+}
+
 .white-div {
   background-color: white;
 }
