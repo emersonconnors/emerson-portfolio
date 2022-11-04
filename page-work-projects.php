@@ -22,7 +22,7 @@ get_header();
 
 	while (have_posts()) :
 		the_post();
-		get_template_part('template-parts/content', 'page');
+		the_title('<h1 class="entry-title">', '</h1>');
 	?>
 		<div class="button-group filter-button-group">
 			<button class="iso-button" data-filter="*">Show All</button>
