@@ -78,11 +78,7 @@ get_header();
 	<?php
 		}
 
-		$image = get_field('work_picture_1');
-		$size = 'full'; // (thumbnail, medium, large, full or custom size)
-		if( $image ) {
-    		echo wp_get_attachment_image( $image, $size );
-		}
+	
 
 	}
 	?>
