@@ -27,59 +27,68 @@ get_header();
 		endif;
 
 	endwhile; // End of the loop.
-	if (function_exists('get_field')) {
+
 	?>
-		<?php if (get_field('work_picture_1')) : ?>
-			<img class='work-page-img' src="<?php the_field('work_picture_1'); ?>" />
-		<?php endif; ?>
+	<div class="work-image-holder">
 		<?php
-		?>
-		<?php if (get_field('work_picture_2')) : ?>
-			<img class='work-page-img' src="<?php the_field('work_picture_2'); ?>" />
-		<?php endif; ?>
-		<?php
-		// Check rows existexists.
-		if (have_rows('list_of_skills_used')) :
-			echo '<h4 class="skills-used-h4">Skills Used</h4>';
-			// Loop through rows.
-			echo '<section class="skills-list">';
-			while (have_rows('list_of_skills_used')) : the_row();
-
-				// Load sub field value.
-		?>
-				<p> <?php the_sub_field('skills_used') ?></p>
-			<?php
-			// Do something...
-
-			// End loop.
-			endwhile;
-			echo '</section>';
-		// No value.
-		else :
-		// Do something...
-		endif;
-		if (get_field('description_of_work')) {
-			?>
-			<h4 class='skills-used-h4'>Project Overview</h4>
-			<p class='work-page-p'><?php the_field('description_of_work'); ?></p>
-		<?php
+		if (function_exists('get_field')) {
+			$image = get_field('work_picture_1');
+			$size2 = 'full';
+			$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
+			if ($image) {
+				echo wp_get_attachment_image($image, $size);
+			}
 		}
-		if (get_field('link_to_github')) {
-			// add div and class
-		?>
-
-			<br>
-			<a class='work-page-p' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
-		<?php
+		if (function_exists('get_field')) {
+			$image = get_field('work_picture_2');
+			$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
+			if ($image) {
+				echo wp_get_attachment_image($image, $size);
+			}
 		}
-		if (get_field('link_to_live_site')) {
 		?>
-			<a class='work-page-p' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
+	</div>
 	<?php
-		}
+	// Check rows existexists.
+	if (have_rows('list_of_skills_used')) :
+		echo '<h4 class="skills-used-h4">Skills Used</h4>';
+		// Loop through rows.
+		echo '<section class="skills-list">';
+		while (have_rows('list_of_skills_used')) : the_row();
 
+			// Load sub field value.
+	?>
+			<p> <?php the_sub_field('skills_used') ?></p>
+		<?php
+		// Do something...
 
+		// End loop.
+		endwhile;
+		echo '</section>';
+	// No value.
+	else :
+	// Do something...
+	endif;
+	if (get_field('description_of_work')) {
+		?>
+		<h4 class='skills-used-h4'>Project Overview</h4>
+		<p class='work-page-p'><?php the_field('description_of_work'); ?></p>
+	<?php
 	}
+	if (get_field('link_to_github')) {
+		// add div and class
+	?>
+
+		<br>
+		<a class='work-page-p' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
+	<?php
+	}
+	if (get_field('link_to_live_site')) {
+	?>
+		<a class='work-page-p' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
+	<?php
+	}
+
 	?>
 
 </main><!-- #main -->
