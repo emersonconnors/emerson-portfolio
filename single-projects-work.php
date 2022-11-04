@@ -17,7 +17,7 @@ get_header();
 	while (have_posts()) :
 		the_post();
 
-		get_template_part('template-parts/content', get_post_type());
+		the_title('<h1 class="entry-title">', '</h1>');
 
 
 
@@ -77,13 +77,6 @@ get_header();
 			<a class='work-page-p' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
 	<?php
 		}
-
-		$image = get_field('work_picture_1');
-		$size = 'full'; // (thumbnail, medium, large, full or custom size)
-		if( $image ) {
-    		echo wp_get_attachment_image( $image, $size );
-		}
-
 	}
 	?>
 
