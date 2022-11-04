@@ -512,9 +512,25 @@ big {
 
 /* Elements
 --------------------------------------------- */
+.sub-menu {
+  width: fit-content;
+}
+li ul.sub-menu li {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+li ul.sub-menu li a {
+  background-color: white;
+  color: #2b3990;
+  border: 2px solid #2b3990;
+  padding: 0.2rem 1rem;
+  width: 100px;
+}
 
 .work-image-holder img {
   margin-right: 4px;
+  border-radius: 3px;
 }
 .work-image-holder {
   display: flex;
@@ -524,6 +540,12 @@ big {
 
 .button-group {
   margin-left: 17rem;
+}
+.iso-button:hover,
+.iso-button:active,
+.iso-button:focus {
+  background-color: #2b399077;
+  border-color: #2b3990;
 }
 
 .iso-button {
@@ -845,14 +867,6 @@ nav .menu-toggle {
   fill: #2b3990;
 }
 
-/*  */
-
-.sub-menu ul {
-  position: absolute;
-  bottom: 5%;
-}
-/*  */
-
 .main-navigation {
   display: block;
   width: 100%;
@@ -868,7 +882,6 @@ nav .menu-toggle {
 }
 
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
   top: 100%;
@@ -885,10 +898,6 @@ nav .menu-toggle {
 .main-navigation ul ul li.focus > ul {
   display: block;
   left: auto;
-}
-
-.main-navigation ul ul a {
-  width: 200px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -930,12 +939,19 @@ a:active {
   .menu-toggle {
     display: none;
   }
-
+  .main-navigation ul.sub-menu {
+    flex-direction: column;
+    text-align: left;
+    width: fit-content;
+  }
   .main-navigation ul {
     display: flex;
   }
 }
-
+ul li li ul {
+  display: flex;
+  justify-content: center;
+}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
