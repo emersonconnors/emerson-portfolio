@@ -513,6 +513,15 @@ big {
 /* Elements
 --------------------------------------------- */
 
+.work-image-holder img {
+  margin-right: 4px;
+}
+.work-image-holder {
+  display: flex;
+  align-items: center;
+  margin-left: 17rem;
+}
+
 .button-group {
   margin-left: 17rem;
 }
