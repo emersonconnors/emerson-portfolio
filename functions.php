@@ -23,7 +23,7 @@ if (!defined('_S_VERSION')) {
 function emerson_portfolio_setup()
 {
 
-	add_image_size( 'work-preview', 400, 200 );
+	add_image_size('work-preview', 396, 200);
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
