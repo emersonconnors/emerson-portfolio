@@ -512,21 +512,6 @@ big {
 
 /* Elements
 --------------------------------------------- */
-.sub-menu {
-  width: fit-content;
-}
-li ul.sub-menu li {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-}
-li ul.sub-menu li a {
-  background-color: white;
-  color: #2b3990;
-  border: 2px solid #2b3990;
-  padding: 0.2rem 1rem;
-  width: 100px;
-}
 
 .work-image-holder img {
   margin-right: 4px;
@@ -859,6 +844,23 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
+
+.sub-menu {
+  width: fit-content;
+}
+li ul.sub-menu li {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+li ul.sub-menu li a {
+  background-color: white;
+  color: #2b3990;
+  border: 2px solid #2b3990;
+  padding: 0.2rem 1rem;
+  width: 100px;
+}
+
 nav .menu-toggle {
   width: 75px;
   height: auto;
@@ -1200,4 +1202,23 @@ ul li li ul {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+/* Media Queries
+--------------------------------------------- */
+
+@media (max-width: 1025px) {
+  .index-name,
+  .index-work-title {
+    margin: 1rem 5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .index-name,
+  .index-work-title {
+    margin: 1rem 1.5rem;
+  }
+}
+@media (max-width: 600px) {
 }
