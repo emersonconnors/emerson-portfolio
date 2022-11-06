@@ -18,6 +18,9 @@ get_header();
 		the_post();
 
 		the_title('<h1 class="entry-title">', '</h1>');
+	?>
+
+	<?php
 
 
 
