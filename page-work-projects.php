@@ -61,7 +61,7 @@ get_header();
 
 
 					<a class="no-deco" href='<?php the_permalink(); ?>'>
-						<h4 class="works-h4"><?php the_title(); ?></h4>
+						<h2 class="works-h4"><?php the_title(); ?></h2>
 						<?php
 						if (function_exists('get_field')) {
 							$image = get_field('work_picture_1');

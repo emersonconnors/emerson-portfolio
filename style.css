@@ -856,8 +856,9 @@ textarea {
 li ul.sub-menu li {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  margin: 0.25rem auto;
 }
+
 li ul.sub-menu li a {
   background-color: white;
   color: #2b3990;
@@ -936,13 +937,22 @@ a:active {
 .main-navigation.toggled ul {
   display: block;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
   .main-navigation.toggled ul {
     position: absolute;
     right: 5%;
   }
+  div ul li a {
+    margin-top: 1rem;
+  }
+
+  div ul li ul.sub-menu li {
+    bottom: 5rem;
+    right: 9rem;
+  }
 }
-@media only screen and (min-width: 37.5em) {
+
+@media only screen and (min-width: 680px) {
   .menu-toggle {
     display: none;
   }
@@ -1256,6 +1266,9 @@ ul li li ul {
   .attachment-work-preview:nth-child(2) {
     display: none;
   }
+  .iso-button {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -1296,6 +1309,4 @@ ul li li ul {
   .site-main .wp-block-button {
     margin: 1rem 1.5rem;
   }
-}
-@media only screen and (max-width: 600px) {
 }
