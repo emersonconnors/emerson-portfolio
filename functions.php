@@ -209,3 +209,10 @@ function custom_field_excerpt()
 	}
 	return apply_filters('the_excerpt', $text);
 }
+
+function wd_admin_menu_remove()
+{
+	remove_menu_page('edit.php');
+	remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'wd_admin_menu_remove');

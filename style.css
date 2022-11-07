@@ -410,14 +410,14 @@ p.index-work-title {
   margin: 1rem 17rem;
 }
 
-@media (max-width: 1025px) {
+@media only screen and (max-width: 1025px) {
   .index-name,
   .index-work-title {
     margin: 1rem 5rem;
   }
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   .index-name,
   .index-work-title {
     margin: 1rem 1.5rem;
@@ -562,6 +562,11 @@ big {
 .textarea-excerpt {
   margin: 1rem 17rem;
   max-width: 50rem;
+  text-decoration: none;
+}
+.no-deco {
+  text-decoration: none;
+  padding: 1rem;
 }
 
 .work-page-p {
@@ -648,13 +653,13 @@ footer .site-info {
   margin: 0.5rem 17rem;
 }
 
-@media (max-width: 1025px) {
+@media only screen and (max-width: 1025px) {
   .site-main .wp-block-button {
     margin: 0.5rem 5rem;
   }
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   .site-main .wp-block-button {
     margin: 0.5rem 1.5rem;
   }
@@ -931,13 +936,13 @@ a:active {
 .main-navigation.toggled ul {
   display: block;
 }
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .main-navigation.toggled ul {
     position: absolute;
     right: 5%;
   }
 }
-@media screen and (min-width: 37.5em) {
+@media only screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
@@ -1207,18 +1212,90 @@ ul li li ul {
 /* Media Queries
 --------------------------------------------- */
 
-@media (max-width: 1025px) {
+@media only screen and (max-width: 1025px) {
   .index-name,
   .index-work-title {
     margin: 1rem 5rem;
   }
+  .work-image-holder {
+    margin: 1rem 5rem;
+  }
+  .button-group {
+    margin: 1rem 5rem;
+  }
+  .works-h4 {
+    margin: 1rem 5rem;
+  }
+  .textarea-excerpt {
+    margin: 1rem 5rem;
+  }
+  .work-page-p {
+    margin: 1rem 5rem;
+  }
+  .skills-list {
+    margin: 1rem 5rem;
+  }
+  .skills-used-h4 {
+    margin: 1rem 5rem;
+  }
+  .entry-title {
+    margin: 1rem 5rem;
+  }
+  .about-page-p {
+    margin: 1rem 5rem;
+  }
+  .skills-about {
+    margin: 1rem 5rem;
+  }
+  .site-main .wp-block-button {
+    margin: 1rem 5rem;
+  }
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 850px) {
+  .attachment-work-preview:nth-child(2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
   .index-name,
   .index-work-title {
     margin: 1rem 1.5rem;
   }
+  .work-image-holder {
+    margin: 1rem 1.5rem;
+  }
+  .button-group {
+    margin: 1rem 1.5rem;
+  }
+  .works-h4 {
+    margin: 1rem 1.5rem;
+  }
+  .textarea-excerpt {
+    margin: 1rem 1.5rem;
+  }
+  .work-page-p {
+    margin: 1rem 1.5rem;
+  }
+  .skills-list {
+    margin: 1rem 1.5rem;
+  }
+  .skills-used-h4 {
+    margin: 1rem 1.5rem;
+  }
+  .entry-title {
+    margin: 1rem 1.5rem;
+  }
+  .about-page-p {
+    margin: 1rem 1.5rem;
+  }
+  .skills-about {
+    margin: 1rem 1.5rem;
+  }
+  .site-main .wp-block-button {
+    margin: 1rem 1.5rem;
+  }
 }
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 }
