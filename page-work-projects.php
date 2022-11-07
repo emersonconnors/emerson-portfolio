@@ -60,23 +60,24 @@ get_header();
 
 
 
-					<h4 class="works-h4"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h4>
-					<?php
-					if (function_exists('get_field')) {
-						$image = get_field('work_picture_1');
-						$image2 = get_field('work_picture_2');
-						$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
-						if ($image) {
-							echo '<div class="work-image-holder">';
-							echo wp_get_attachment_image($image, $size);
-							echo wp_get_attachment_image($image2, $size);
-							echo '</div>';
-						};
-					}
-					?>
-		<?php
+					<a class="no-deco" href='<?php the_permalink(); ?>'>
+						<h4 class="works-h4"><?php the_title(); ?></h4>
+						<?php
+						if (function_exists('get_field')) {
+							$image = get_field('work_picture_1');
+							$image2 = get_field('work_picture_2');
+							$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
+							if ($image) {
+								echo '<div class="work-image-holder">';
+								echo wp_get_attachment_image($image, $size);
+								echo wp_get_attachment_image($image2, $size);
+								echo '</div>';
+							};
+						}
+						?>
+			<?php
 				echo '<div class="textarea-excerpt">' . custom_field_excerpt() . '</div>';
-
+				echo '</a>';
 				echo '</div>';
 			}
 			wp_reset_postdata();
@@ -89,12 +90,12 @@ get_header();
 		endif;
 
 	endwhile; // End of the loop.
-		?>
-		<?php
+			?>
+			<?php
 
 
 
-		?>
+			?>
 
 </main><!-- #main -->
 
