@@ -54,7 +54,7 @@ get_header();
 	<?php
 	// Check rows existexists.
 	if (have_rows('list_of_skills_used')) :
-		echo '<h4 class="skills-used-h4">Skills Used</h4>';
+		echo '<h2 class="skills-used-h4">Skills Used</h2>';
 		// Loop through rows.
 		echo '<section class="skills-list">';
 		while (have_rows('list_of_skills_used')) : the_row();
@@ -74,7 +74,7 @@ get_header();
 	endif;
 	if (get_field('description_of_work')) {
 		?>
-		<h4 class='skills-used-h4'>Project Overview</h4>
+		<h2 class='skills-used-h4'>Project Overview</h2>
 		<p class='work-page-p'><?php the_field('description_of_work'); ?></p>
 	<?php
 	}
