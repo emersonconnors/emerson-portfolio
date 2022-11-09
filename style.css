@@ -512,6 +512,9 @@ big {
 
 /* Elements
 --------------------------------------------- */
+.single-work-img {
+  width: 396px;
+}
 
 .work-image-holder img {
   margin-right: 4px;

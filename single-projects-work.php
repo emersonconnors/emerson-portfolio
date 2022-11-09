@@ -34,20 +34,15 @@ get_header();
 	?>
 	<div class="work-image-holder">
 		<?php
-		if (function_exists('get_field')) {
-			$image = get_field('work_picture_1');
-			$size2 = 'full';
-			$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
-			if ($image) {
-				echo wp_get_attachment_image($image, $size);
-			}
+		if (get_field('work_picture_1')) {
+		?>
+			<img src="<?php the_field('work_picture_1'); ?>" data-action="zoom" class="single-work-img" />
+		<?php
 		}
-		if (function_exists('get_field')) {
-			$image = get_field('work_picture_2');
-			$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
-			if ($image) {
-				echo wp_get_attachment_image($image, $size);
-			}
+		if (get_field('work_picture_2')) {
+		?>
+			<img src="<?php the_field('work_picture_2'); ?>" data-action="zoom" class="single-work-img" />
+		<?php
 		}
 		?>
 	</div>
