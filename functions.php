@@ -145,6 +145,13 @@ add_action('widgets_init', 'emerson_portfolio_widgets_init');
  */
 function emerson_portfolio_scripts()
 {
+	// bootstrap script
+	wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js', array('jquery'), _S_VERSION, true);
+	// fat zoom js script
+	wp_enqueue_script('fat-zoom-js', get_template_directory_uri() . '/js/zoom.js', array('bootstrap'), _S_VERSION, true);
+	wp_enqueue_style('zoom-style', get_template_directory_uri() . '/css/zoom.css', array(), _S_VERSION);
+
+
 	//isotope settings
 	wp_enqueue_script('emerson-portfolio-iso-settings', get_template_directory_uri() . '/js/isotope.settings.js', array('emerson-portfolio-isotope'), _S_VERSION, true);
 	//isotope script
