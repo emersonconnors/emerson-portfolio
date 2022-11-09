@@ -78,17 +78,18 @@ get_header();
 	?>
 
 		<br>
-		<a class='work-page-p' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
-	<?php
+		<div class="link-holder">
+			<a class='work-page-a' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
+		<?php
 	}
 	if (get_field('link_to_live_site')) {
-	?>
-		<a class='work-page-p' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
-	<?php
+		?>
+			<a class='work-page-a' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
+		<?php
 	}
 
-	?>
-
+		?>
+		</div>
 </main><!-- #main -->
 
 <?php
