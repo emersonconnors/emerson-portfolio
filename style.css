@@ -512,6 +512,23 @@ big {
 
 /* Elements
 --------------------------------------------- */
+.front-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.link-holder {
+  display: flex;
+  max-width: 50rem;
+  justify-content: space-between;
+  margin-left: 17rem;
+}
+.work-page-a {
+  margin-right: 0;
+  margin-left: 0;
+}
 header .entry-title,
 main .entry-title {
   margin-bottom: 3rem;
@@ -581,7 +598,7 @@ main .entry-title {
 
 .work-page-p {
   max-width: 50rem;
-  margin: 1rem 17rem;
+  margin: 1rem 0 1rem 17rem;
 }
 .skills-list {
   display: flex;
@@ -654,6 +671,9 @@ footer .site-info {
 .wp-block-button a {
   width: 200px;
 }
+.wp-block-button a:nth-child(2) {
+  margin-bottom: 6rem;
+}
 
 .wp-block-button a:visited {
   color: white;
@@ -672,6 +692,9 @@ footer .site-info {
 @media only screen and (max-width: 640px) {
   .site-main .wp-block-button {
     margin: 0.5rem 1.5rem;
+  }
+  p.index-work-title {
+    margin-bottom: 4rem;
   }
 }
 
@@ -953,7 +976,7 @@ a:active {
     right: 5%;
   }
   div ul li a {
-    margin-top: 1rem;
+    margin-top: 1.75rem;
   }
 
   div ul li ul.sub-menu li {
@@ -1270,6 +1293,9 @@ ul li li ul {
   .site-main .wp-block-button {
     margin: 1rem 5rem;
   }
+  .link-holder {
+    margin: 1rem 5rem;
+  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -1289,6 +1315,9 @@ ul li li ul {
 }
 
 @media only screen and (max-width: 640px) {
+  .link-holder {
+    margin: 1rem 1.5rem;
+  }
   .index-name,
   .index-work-title {
     margin: 1rem 1.5rem;
