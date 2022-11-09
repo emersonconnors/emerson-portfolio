@@ -512,6 +512,13 @@ big {
 
 /* Elements
 --------------------------------------------- */
+header .entry-title,
+main .entry-title {
+  margin-bottom: 3rem;
+}
+.grid-item {
+  margin-bottom: 2rem;
+}
 .single-work-img {
   width: 396px;
 }
@@ -563,7 +570,7 @@ big {
 }
 
 .textarea-excerpt {
-  margin: 1rem 17rem;
+  margin: 1rem 3.5rem 1rem 17rem;
   max-width: 50rem;
   text-decoration: none;
 }
@@ -1225,7 +1232,7 @@ ul li li ul {
 /* Media Queries
 --------------------------------------------- */
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1080px) {
   .index-name,
   .index-work-title {
     margin: 1rem 5rem;
@@ -1265,9 +1272,16 @@ ul li li ul {
   }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1080px) {
   .attachment-work-preview:nth-child(2) {
     display: none;
+  }
+  .single-work-img:nth-child(2) {
+    display: none;
+  }
+  .single-work-img {
+    max-width: 50rem;
+    width: 100%;
   }
   .iso-button {
     margin-bottom: 0.5rem;
