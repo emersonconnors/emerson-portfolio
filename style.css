@@ -517,6 +517,7 @@ big {
   bottom: 0;
   right: 0;
   left: 0;
+  height: 2rem;
 }
 
 .link-holder {
@@ -979,9 +980,9 @@ a:active {
     margin-top: 1.75rem;
   }
 
-  div ul li ul.sub-menu li {
-    bottom: 5rem;
-    right: 9rem;
+  .main-navigation.toggled ul.sub-menu {
+    right: 10rem;
+    top: -4.5rem;
   }
 }
 
