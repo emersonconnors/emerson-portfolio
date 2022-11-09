@@ -69,8 +69,18 @@ get_header();
 							$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
 							if ($image) {
 								echo '<div class="work-image-holder">';
-								echo wp_get_attachment_image($image, $size);
-								echo wp_get_attachment_image($image2, $size);
+
+								if (get_field('work_picture_1')) {
+						?>
+									<img src="<?php the_field('work_picture_1'); ?>" class="single-work-img" />
+								<?php
+								}
+								if (get_field('work_picture_2')) {
+								?>
+									<img src="<?php the_field('work_picture_2'); ?>" class="single-work-img" />
+						<?php
+								}
+
 								echo '</div>';
 							};
 						}

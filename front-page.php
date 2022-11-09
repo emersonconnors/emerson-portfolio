@@ -35,7 +35,8 @@ get_header();
 	?>
 
 </main><!-- #main -->
-
-<?php
-
-get_footer();
+<div class="front-footer">
+	<?php
+	get_footer();
+	?>
+</div>
