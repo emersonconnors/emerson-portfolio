@@ -622,7 +622,7 @@ main .entry-title {
   height: 0;
 }
 .skills-about {
-  width: 50rem;
+  max-width: 50rem;
   margin: 2rem 17rem;
   margin-bottom: 5rem;
 }
