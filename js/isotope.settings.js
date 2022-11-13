@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
   var $grid = $(".grid").isotope({
     // options
     itemSelector: ".grid-item",
-    layoutMode: "fitRows",
+    layoutMode: "vertical",
   });
 
   // filter items on button click

@@ -70,18 +70,22 @@ get_header();
 						if ($image) :
 							$url = $image['url'];
 							$alt = $image['alt'];
+							$size = 'medium_large';
+							$thumb = $image['sizes'][$size];
 
 						?>
-							<img src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
+							<img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
 						<?php endif;
 
 						$image = get_field('work_picture_2');
 						if ($image) :
 							$url = $image['url'];
 							$alt = $image['alt'];
+							$size = 'medium_large';
+							$thumb = $image['sizes'][$size];
 
 						?>
-							<img src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
+							<img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
 						<?php endif; ?>
 
 				</div>

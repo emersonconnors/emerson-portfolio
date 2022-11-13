@@ -514,12 +514,14 @@ big {
 --------------------------------------------- */
 .front-footer {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   right: 0;
   left: 0;
   height: 2rem;
 }
-
+.front-footer footer {
+  margin: 0;
+}
 .link-holder {
   display: flex;
   max-width: 50rem;
@@ -539,6 +541,7 @@ main .entry-title {
 }
 .single-work-img {
   width: 396px;
+  min-height: 186px;
 }
 
 .work-image-holder img {
@@ -604,6 +607,7 @@ main .entry-title {
 .skills-list {
   display: flex;
   margin-left: 17rem;
+  flex-wrap: wrap;
 }
 .skills-list p {
   margin-right: 1rem;

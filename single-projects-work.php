@@ -76,25 +76,31 @@ get_header();
 		?>
 		<h2 class='skills-used-h4'>Project Overview</h2>
 		<p class='work-page-p'><?php the_field('description_of_work'); ?></p>
+		<h2 class='skills-used-h4'>What I Learned</h2>
+		<p class='work-page-p'><?php the_field('what_i_learned'); ?></p>
+		<br>
 	<?php
 	}
-	if (get_field('link_to_github')) {
-		// add div and class
 	?>
+	<div class="link-holder">
+		<?php
+		if (get_field('link_to_github')) {
+			// add div and class
+		?>
 
-		<br>
-		<div class="link-holder">
+
+
 			<a aria-label="link to github" class='work-page-a' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
 		<?php
-	}
-	if (get_field('link_to_live_site')) {
+		}
+		if (get_field('link_to_live_site')) {
 		?>
 			<a aria-label="link to live site" class='work-page-a' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
 		<?php
-	}
+		}
 
 		?>
-		</div>
+	</div>
 </main><!-- #main -->
 
 <?php
