@@ -35,8 +35,3 @@ get_header();
 	?>
 
 </main><!-- #main -->
-<div class="front-footer">
-	<?php
-	get_footer();
-	?>
-</div>
