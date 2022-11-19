@@ -34,17 +34,22 @@ get_header();
 	?>
 	<div class="work-image-holder">
 		<?php
-		if (get_field('work_picture_1')) {
+
+		$image = get_field('work_picture_1');
+		if ($image) :
+			$url = $image['url'];
+			$alt = $image['alt'];
 		?>
-			<img src="<?php the_field('work_picture_1'); ?>" data-action="zoom" class="single-work-img" />
-		<?php
-		}
-		if (get_field('work_picture_2')) {
+			<img src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" data-action="zoom" class="single-work-img" />
+		<?php endif;
+		$image = get_field('work_picture_2');
+		if ($image) :
+			$url = $image['url'];
+			$alt = $image['alt'];
 		?>
-			<img src="<?php the_field('work_picture_2'); ?>" data-action="zoom" class="single-work-img" />
-		<?php
-		}
-		?>
+			<img src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>" data-action="zoom" class="single-work-img" />
+		<?php endif; ?>
+
 	</div>
 	<?php
 	// Check rows existexists.
@@ -71,25 +76,31 @@ get_header();
 		?>
 		<h2 class='skills-used-h4'>Project Overview</h2>
 		<p class='work-page-p'><?php the_field('description_of_work'); ?></p>
+		<h2 class='skills-used-h4'>What I Learned</h2>
+		<p class='work-page-p'><?php the_field('what_i_learned'); ?></p>
+		<br>
 	<?php
 	}
-	if (get_field('link_to_github')) {
-		// add div and class
 	?>
-
-		<br>
-		<div class="link-holder">
-			<a class='work-page-a' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
+	<div class="link-holder">
 		<?php
-	}
-	if (get_field('link_to_live_site')) {
+		if (get_field('link_to_github')) {
+			// add div and class
 		?>
-			<a class='work-page-a' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
+
+
+
+			<a aria-label="link to github" class='work-page-a' href='<?php the_field('link_to_github') ?>'>Link to GitHub.</a>
 		<?php
-	}
+		}
+		if (get_field('link_to_live_site')) {
+		?>
+			<a aria-label="link to live site" class='work-page-a' href='<?php the_field('link_to_live_site') ?>'>Link to Live Site.</a>
+		<?php
+		}
 
 		?>
-		</div>
+	</div>
 </main><!-- #main -->
 
 <?php

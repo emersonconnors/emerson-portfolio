@@ -513,13 +513,11 @@ big {
 /* Elements
 --------------------------------------------- */
 .front-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 2rem;
+  display: none;
 }
-
+.front-footer footer {
+  margin: 0;
+}
 .link-holder {
   display: flex;
   max-width: 50rem;
@@ -539,6 +537,7 @@ main .entry-title {
 }
 .single-work-img {
   width: 396px;
+  min-height: 186px;
 }
 
 .work-image-holder img {
@@ -604,6 +603,7 @@ main .entry-title {
 .skills-list {
   display: flex;
   margin-left: 17rem;
+  flex-wrap: wrap;
 }
 .skills-list p {
   margin-right: 1rem;
@@ -622,7 +622,7 @@ main .entry-title {
   height: 0;
 }
 .skills-about {
-  width: 50rem;
+  max-width: 50rem;
   margin: 2rem 17rem;
   margin-bottom: 5rem;
 }

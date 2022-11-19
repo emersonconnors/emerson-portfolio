@@ -25,14 +25,14 @@ get_header();
 		the_title('<h1 class="entry-title">', '</h1>');
 	?>
 		<div class="button-group filter-button-group">
-			<button class="iso-button" data-filter="*">Show All</button>
+			<button aria-label="iso-filter" class="iso-button" data-filter="*">Show All</button>
 			<?php
 			$terms = get_terms(array(
 				'taxonomy' => 'work-languages',
 				'hide_empty' => false,
 			));
 			foreach ($terms as $term) {
-				echo '<button class="iso-button" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+				echo '<button aria-label="iso-filter" class="iso-button" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
 			}
 			?>
 		</div>
@@ -60,32 +60,36 @@ get_header();
 
 
 
-					<a class="no-deco" href='<?php the_permalink(); ?>'>
+					<a aria-label="single post link" class="no-deco" href='<?php the_permalink(); ?>'>
 						<h2 class="works-h4"><?php the_title(); ?></h2>
 						<?php
-						if (function_exists('get_field')) {
-							$image = get_field('work_picture_1');
-							$image2 = get_field('work_picture_2');
-							$size = 'work-preview'; // (thumbnail, medium, large, full or custom size)
-							if ($image) {
-								echo '<div class="work-image-holder">';
 
-								if (get_field('work_picture_1')) {
-						?>
-									<img src="<?php the_field('work_picture_1'); ?>" class="single-work-img" />
-								<?php
-								}
-								if (get_field('work_picture_2')) {
-								?>
-									<img src="<?php the_field('work_picture_2'); ?>" class="single-work-img" />
-						<?php
-								}
+						echo '<div class="work-image-holder">';
+						$image = get_field('work_picture_1');
 
-								echo '</div>';
-							};
-						}
+						if ($image) :
+							$url = $image['url'];
+							$alt = $image['alt'];
+							$size = 'medium_large';
+							$thumb = $image['sizes'][$size];
+
 						?>
-			<?php
+							<img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
+						<?php endif;
+
+						$image = get_field('work_picture_2');
+						if ($image) :
+							$url = $image['url'];
+							$alt = $image['alt'];
+							$size = 'medium_large';
+							$thumb = $image['sizes'][$size];
+
+						?>
+							<img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" class="single-work-img" />
+						<?php endif; ?>
+
+				</div>
+	<?php
 				echo '<div class="textarea-excerpt">' . custom_field_excerpt() . '</div>';
 				echo '</a>';
 				echo '</div>';
@@ -100,12 +104,12 @@ get_header();
 		endif;
 
 	endwhile; // End of the loop.
-			?>
-			<?php
+	?>
+	<?php
 
 
 
-			?>
+	?>
 
 </main><!-- #main -->
 
