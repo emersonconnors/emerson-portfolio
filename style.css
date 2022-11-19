@@ -513,11 +513,7 @@ big {
 /* Elements
 --------------------------------------------- */
 .front-footer {
-  position: absolute;
-  bottom: 1rem;
-  right: 0;
-  left: 0;
-  height: 2rem;
+  display: none;
 }
 .front-footer footer {
   margin: 0;
